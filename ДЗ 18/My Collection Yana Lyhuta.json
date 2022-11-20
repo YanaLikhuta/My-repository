@@ -1,0 +1,659 @@
+{
+	"info": {
+		"_postman_id": "554da730-a341-4df2-9860-511eca472090",
+		"name": "My Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18267039"
+	},
+	"item": [
+		{
+			"name": "Create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"name\":\"aleksandr\",\n\"age\":\"37\",\n\"gender\":\"male\",\n\"city\": \"Kyiv\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Base URL}}/users",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create user valid",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"name\":\"aleksandr\",\n\"age\":\"37\",\n\"gender\":\"male\",\n\"city\": \"Kyiv\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base URL}}/users",
+							"host": [
+								"{{Base URL}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 09 Nov 2022 21:03:31 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "103"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "access-control-allow-origin",
+							"value": "*"
+						},
+						{
+							"key": "Apigw-Requestid",
+							"value": "bWhRQifQvHcEPZg="
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"age\": 37,\n    \"city\": \"Kyiv\",\n    \"gender\": \"male\",\n    \"name\": \"aleksandr\",\n    \"id\": \"50a3ed51-f749-47ab-8314-be73b47aa2f4\"\n}"
+				},
+				{
+					"name": "Create user invalid test",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"name\":\"alina\",\n\"age\":\"37\",\n\"gender\":\"male\",\n\"city\": \"Kyiv\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base URL}}/users",
+							"host": [
+								"{{Base URL}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 09 Nov 2022 21:31:15 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "33"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "access-control-allow-origin",
+							"value": "*"
+						},
+						{
+							"key": "Apigw-Requestid",
+							"value": "bWlVhjZlPHcEPCg="
+						}
+					],
+					"cookie": [],
+					"body": "Validation error: name is invalid"
+				}
+			]
+		},
+		{
+			"name": "Update user",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "age",
+							"value": " 45",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": " Chernigov",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": " female",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": " aleksandra",
+							"type": "text"
+						},
+						{
+							"key": "id",
+							"value": "{{id}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{Base URL}}/users",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update user valid",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "age",
+									"value": " 37",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": " Chernigov",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": " female",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": " aleksandra",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "{{id}}",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base URL}}/users",
+							"host": [
+								"{{Base URL}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 09 Nov 2022 21:11:05 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "111"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "access-control-allow-origin",
+							"value": "*"
+						},
+						{
+							"key": "Apigw-Requestid",
+							"value": "bWiYDg0XvHcEPRA="
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"gender\": \"female\",\n    \"city\": \"Chernigov\",\n    \"name\": \"aleksandra\",\n    \"id\": \"50a3ed51-f749-47ab-8314-be73b47aa2f4\",\n    \"age\": 37\n}"
+				},
+				{
+					"name": "Don`t Update user  age - bag",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "age",
+									"value": " 45",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": " Chernigov",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": " female",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": " aleksandra",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "{{id}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base URL}}/users",
+							"host": [
+								"{{Base URL}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 10 Nov 2022 20:57:28 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "114"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "access-control-allow-origin",
+							"value": "*"
+						},
+						{
+							"key": "Apigw-Requestid",
+							"value": "bZzUzjq1PHcEJrA="
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"gender\": \" female\",\n    \"city\": \" Chernigov\",\n    \"name\": \" aleksandra\",\n    \"id\": \"93605188-19f5-4ed4-9616-0804f60b2d95\",\n    \"age\": 37\n}"
+				}
+			]
+		},
+		{
+			"name": "Get user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base URL}}/users?id={{id}}",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "{{id}}"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get example valid",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base URL}}/users?id={{id}}",
+							"host": [
+								"{{Base URL}}"
+							],
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 09 Nov 2022 21:05:43 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "103"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "access-control-allow-origin",
+							"value": "*"
+						},
+						{
+							"key": "Apigw-Requestid",
+							"value": "bWhmChf2vHcEPmA="
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"age\": 37,\n    \"city\": \"Kyiv\",\n    \"gender\": \"male\",\n    \"name\": \"aleksandr\",\n    \"id\": \"50a3ed51-f749-47ab-8314-be73b47aa2f4\"\n}"
+				},
+				{
+					"name": "Not found user",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base URL}}/users?id={{id}}",
+							"host": [
+								"{{Base URL}}"
+							],
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 10 Nov 2022 21:00:49 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "14"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "access-control-allow-origin",
+							"value": "*"
+						},
+						{
+							"key": "Apigw-Requestid",
+							"value": "bZz0RjExvHcEJmw="
+						}
+					],
+					"cookie": [],
+					"body": "No users found"
+				}
+			]
+		},
+		{
+			"name": "Delete Request",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{Base URL}}/users?id={{id}}",
+					"host": [
+						"{{Base URL}}"
+					],
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "{{id}}"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete Request valid",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{Base URL}}/users?id={{id}}",
+							"host": [
+								"{{Base URL}}"
+							],
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 09 Nov 2022 21:13:40 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "15"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "access-control-allow-origin",
+							"value": "*"
+						},
+						{
+							"key": "Apigw-Requestid",
+							"value": "bWiwui4jPHcEPRA="
+						}
+					],
+					"cookie": [],
+					"body": "User is deleted"
+				},
+				{
+					"name": "Request delete same id - second try",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{Base URL}}/users?id={{id}}",
+							"host": [
+								"{{Base URL}}"
+							],
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 10 Nov 2022 21:04:18 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "13"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "access-control-allow-origin",
+							"value": "*"
+						},
+						{
+							"key": "Apigw-Requestid",
+							"value": "bZ0UogS1PHcEJHg="
+						}
+					],
+					"cookie": [],
+					"body": "No user found"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"pm.test(\"Status code is 200\", function () {",
+					"    pm.response.to.have.status(200);",
+					"});",
+					"pm.sendRequest(\"https://postman-echo.com/get\", function (err, response) {",
+					"    console.log(response.json());",
+					"});"
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Base URL",
+			"value": "https://em.staging.api.onereach.ai/http/1b3bebb7-e882-4f1e-a74b-ee381bfa69d6",
+			"type": "string"
+		},
+		{
+			"key": "id",
+			"value": "93605188-19f5-4ed4-9616-0804f60b2d95"
+		}
+	]
+}

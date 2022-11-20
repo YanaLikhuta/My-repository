@@ -1,0 +1,142 @@
+{
+	"id": "72a07394-5c25-49f1-b0e2-92e00eed9804",
+	"name": "My Collection",
+	"timestamp": "2022-11-10T21:24:45.496Z",
+	"collection_id": "18267039-554da730-a341-4df2-9860-511eca472090",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 4,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "615673f4-a688-480b-acc3-f96fa0cdf43a",
+			"name": "Create user",
+			"url": "https://em.staging.api.onereach.ai/http/1b3bebb7-e882-4f1e-a74b-ee381bfa69d6/users",
+			"time": 1598,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1598
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "eef5da06-7ba6-45ce-8ef5-f3abfc03580c",
+			"name": "Update user",
+			"url": "https://em.staging.api.onereach.ai/http/1b3bebb7-e882-4f1e-a74b-ee381bfa69d6/users",
+			"time": 549,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				549
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "d77ec17b-8313-4bcd-9b35-bec8c009505e",
+			"name": "Get user",
+			"url": "https://em.staging.api.onereach.ai/http/1b3bebb7-e882-4f1e-a74b-ee381bfa69d6/users?id=93605188-19f5-4ed4-9616-0804f60b2d95",
+			"time": 513,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				513
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "c5d52cbb-c325-4433-9079-2d42ac7b4ae6",
+			"name": "Delete Request",
+			"url": "https://em.staging.api.onereach.ai/http/1b3bebb7-e882-4f1e-a74b-ee381bfa69d6/users?id=93605188-19f5-4ed4-9616-0804f60b2d95",
+			"time": 397,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				397
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 3057,
+	"collection": {
+		"requests": [
+			{
+				"id": "615673f4-a688-480b-acc3-f96fa0cdf43a",
+				"method": "POST"
+			},
+			{
+				"id": "eef5da06-7ba6-45ce-8ef5-f3abfc03580c",
+				"method": "PUT"
+			},
+			{
+				"id": "d77ec17b-8313-4bcd-9b35-bec8c009505e",
+				"method": "GET"
+			},
+			{
+				"id": "c5d52cbb-c325-4433-9079-2d42ac7b4ae6",
+				"method": "DELETE"
+			}
+		]
+	}
+}
